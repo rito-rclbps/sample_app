@@ -4,22 +4,11 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false" %>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            mapOptions);
-      }
-    </script>
+    <%= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&language=ja" %>
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>    
   </head>
-  <body>
+  <body onload="initialize()">
     <%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |key, value| %>
