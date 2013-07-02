@@ -1,6 +1,8 @@
-function initialize() {
+function initialize(latlng) {
+alert(latlng);
+  if(typeof latlng === "undefined") return;
   var mapOptions = {
-    center: new google.maps.LatLng(-34.397, 150.644),
+    center: new google.maps.LatLng(latlng["lat"], latlng["lng"]),
     zoom: 8,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };

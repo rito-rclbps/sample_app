@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def create
-    @user = User.new(params[:user])
+    @user = User.new(geocoding(params[:user]))
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def edit
   end
   def update
-    if @user.update_attributes(params[:user])
+    if @user.update_attributes(geocoding(params[:user]))
       flash[:success] = "Profile updated"
       sign_in @user
       redirect_to @user

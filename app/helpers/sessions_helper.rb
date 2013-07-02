@@ -1,4 +1,7 @@
 module SessionsHelper
+  require 'net/http'
+  require 'uri'
+  require 'json'
 
   def sign_in(user)
     cookies.permanent[:remember_token] = user.remember_token
@@ -41,4 +44,15 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url
   end
+
+  def geocoding(user)
+    uri = URI.escape("http://maps.googleapis.com/maps/api/geocode/json?address=#{user[:address]}&sensor=false")
+    uri = URI.parse(uri)
+    json = Net::HTTP.get(uri)
+    result = JSON.parse(json)
+    user[:geocode] = result["results"][0]["geometry"]["location"]
+    debugger
+    user
+  end
+
 end

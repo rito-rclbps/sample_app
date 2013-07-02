@@ -1,3 +1,6 @@
+<% content_for :initialize do %>
+  onload="initialize(<% @user.geocode %>)"
+<% end %>
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="span4">
