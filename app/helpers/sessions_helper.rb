@@ -50,7 +50,9 @@ module SessionsHelper
     uri = URI.parse(uri)
     json = Net::HTTP.get(uri)
     result = JSON.parse(json)
+    return unless result["results"] && result["results"][0]
     user[:geocode] = result["results"][0]["geometry"]["location"]
+    user[:geocode] ||= {lat: "0.0", lng: "0.0"}
     debugger
     user
   end

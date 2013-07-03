@@ -1,4 +1,5 @@
 <% content_for :initialize do %>
+<% break unless @user.geocode %>
 <% geocode = @user.geocode.split("\n") %>
 <% geocode[1] = geocode[1].split(' ')[1] %>
 <% geocode[2] = geocode[2].split(' ')[1] %>
