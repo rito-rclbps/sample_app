@@ -1,8 +1,8 @@
-function initialize(latlng) {
-alert(latlng);
-  if(typeof latlng === "undefined") return;
+function initialize(lat, lng) {
+  alert(lat); // 引数がなぜか渡されていないのでUndefinedになる。
+  if(typeof lat === "undefined") return;
   var mapOptions = {
-    center: new google.maps.LatLng(latlng["lat"], latlng["lng"]),
+    center: new google.maps.LatLng(lat, lng),
     zoom: 8,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };

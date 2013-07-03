@@ -1,5 +1,10 @@
 <% content_for :initialize do %>
-  onload="initialize(<% @user.geocode %>)"
+<% geocode = @user.geocode.split("\n") %>
+<% geocode[1] = geocode[1].split(' ')[1] %>
+<% geocode[2] = geocode[2].split(' ')[1] %>
+<% debugger %>
+  onload="initialize(<%= geocode[1].to_f %>, <%= geocode[2].to_f %>)"
+<% # ↑ここで@user.geocodeが--- !ruby/hash:ActiveSupport::HashWithIndifferentAccess\nlat: 35.6894875\nlng: 139.6917064\nになるのはデータベースのカラムをstring型にしているため。 %>
 <% end %>
 <% provide(:title, @user.name) %>
 <div class="row">
