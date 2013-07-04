@@ -52,10 +52,12 @@ module SessionsHelper
       uri = URI.parse(uri)
       json = Net::HTTP.get(uri)
       result = JSON.parse(json)
-      if user[:status] == "OK"
+      if result["status"] == "OK"
+        debugger
         user[:geocode] = result["results"][0]["geometry"]["location"]
       end
     end
+    debugger
     user
   end
 

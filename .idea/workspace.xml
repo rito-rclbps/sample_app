@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0d5159b-5489-44eb-86fe-422569760701" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/gmaps_initialize.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/gmaps_initialize.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
     </list>
     <ignored path="sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -14,7 +11,7 @@
     <file path="/a.html" changelist="d0d5159b-5489-44eb-86fe-422569760701" time="1372850666823" ignored="false" />
     <file path="/users_controller.rb" changelist="d0d5159b-5489-44eb-86fe-422569760701" time="1372906275603" ignored="false" />
     <file path="/user.rb" changelist="d0d5159b-5489-44eb-86fe-422569760701" time="1372905191163" ignored="false" />
-    <file path="/sessions_helper.rb" changelist="d0d5159b-5489-44eb-86fe-422569760701" time="1372907650444" ignored="false" />
+    <file path="/sessions_helper.rb" changelist="d0d5159b-5489-44eb-86fe-422569760701" time="1372909038125" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +70,7 @@
       <file leaf-file-name="sessions_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="6" selection-start="870" selection-end="870" vertical-scroll-proportion="0.3320965">
+            <state line="54" column="24" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.59183675">
               <folding />
             </state>
           </provider>
@@ -758,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="6" selection-start="870" selection-end="870" vertical-scroll-proportion="0.3320965">
+        <state line="54" column="24" selection-start="1179" selection-end="1179" vertical-scroll-proportion="0.59183675">
           <folding />
         </state>
       </provider>
