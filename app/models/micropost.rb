@@ -1,5 +1,8 @@
 class Micropost < ActiveRecord::Base
-  attr_accessible :content
+
+  mount_uploader :image, ImageUploader
+
+  attr_accessible :content, :image
   belongs_to :user
 
   validates :user_id, presence: true
