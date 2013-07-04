@@ -46,14 +46,16 @@ module SessionsHelper
   end
 
   def geocoding(user)
-    uri = URI.escape("http://maps.googleapis.com/maps/api/geocode/json?address=#{user[:address]}&sensor=false")
-    uri = URI.parse(uri)
-    json = Net::HTTP.get(uri)
-    result = JSON.parse(json)
-    return unless result["results"] && result["results"][0]
-    user[:geocode] = result["results"][0]["geometry"]["location"]
-    user[:geocode] ||= {lat: "0.0", lng: "0.0"}
-    debugger
+    user[:geocode] = {lat: 0.0, lng: 0.0}
+    if user[:address]
+      uri = URI.escape("http://maps.googleapis.com/maps/api/geocode/json?address=#{user[:address]}&sensor=false")
+      uri = URI.parse(uri)
+      json = Net::HTTP.get(uri)
+      result = JSON.parse(json)
+      if user[:status] == "OK"
+        user[:geocode] = result["results"][0]["geometry"]["location"]
+      end
+    end
     user
   end
 

@@ -41,6 +41,7 @@ class UsersController < ApplicationController
       sign_in @user
       redirect_to @user
     else
+      debugger
       render 'edit'
     end
   end
