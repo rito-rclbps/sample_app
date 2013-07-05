@@ -13,5 +13,7 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    ContactMailer.create_contact(params).deliver if params[:email]
   end
+
 end

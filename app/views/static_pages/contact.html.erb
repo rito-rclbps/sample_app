@@ -1,2 +1,22 @@
 <%provide(:title, "Contact")%>
 <h1>Contact</h1>
+<div class="row">
+  <div class="span6 offset3">
+      <%= form_tag("/contact", method: :put) do %>
+      <%= label_tag :name %>
+      <%= text_field_tag :name %>
+
+      <%= label_tag :email %>
+      <%= text_field_tag :email %>
+
+      <%= label_tag :subject %>
+      <%= text_field_tag :subject %>
+
+      <%= label_tag :body %>
+      <%= text_area_tag :body %>
+
+      <%= submit_tag "Send", class: "btn btn-large btn-primary" %>
+      <% end %>
+
+  </div>
+</div>
