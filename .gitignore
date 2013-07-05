@@ -16,4 +16,4 @@
 /public/uploads/tmp/
 /public/uploads/micropost/image/
 
-/config/initializers/smtp_settings.rb
+/config/initializers/secret.rb
